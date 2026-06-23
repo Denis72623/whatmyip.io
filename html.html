@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>IP</title>
+</head>
+<body style="font-family: system-ui, sans-serif;">
+    <strong id="ip">Loading...</strong>
+    <script>
+        fetch('https://api.ipify.org')
+            .then(res => res.text()) 
+            .then(text => {
+                document.getElementById('ip').innerText = text;
+            });
+    </script>
+</body>
+</html>
